@@ -1,0 +1,66 @@
+/* Background Wrapper */
+.minimalist-bg {
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Card Style */
+.modern-card {
+  max-width: 420px;
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 2rem;
+  border: none;
+}
+
+/* Input Fields */
+.modern-input.form-control {
+  background-color: #fff;
+  border: 1px solid #e9ecef;   /* mid-gray */
+  color: #343a40;              /* dark-gray */
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.modern-input.form-control:focus {
+  border-color: #0d6efd; /* primary blue */
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  outline: none;
+}
+
+/* Input Group Text */
+.input-group-text {
+  background-color: #f8f9fa;  /* light-gray */
+  border-color: #e9ecef;
+  color: #343a40;
+  border-radius: 8px 0 0 8px;
+}
+
+/* Button */
+.modern-btn {
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 8px;
+
+  background-color: #0d6efd !important;  /* primary blue */
+  border: 1px solid #0d6efd !important;
+  color: #fff !important;
+  transition: all 0.3s ease;
+}
+
+.modern-btn:hover {
+  background-color: #0b5ed7 !important;  /* darker blue */
+  border-color: #0b5ed7 !important;
+  color: #fff !important;
+}

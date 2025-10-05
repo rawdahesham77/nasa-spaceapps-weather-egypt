@@ -1,0 +1,111 @@
+/* Main Section */
+
+
+.hero-section.full-screen {
+  position: relative;
+  background-color: #0d1117; /* dark space vibe */
+  min-height: 100vh;
+  padding: 0;
+  overflow: hidden; /* Prevent content from spilling out */
+}
+
+/* Background Spline */
+.spline-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Place behind other content */
+}
+
+.spline-bg spline-viewer {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Content Layer */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 5rem 1rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1); /* very light tint */
+  backdrop-filter: blur(1px); /* subtle blur */
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Typography */
+.hero-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ffffff, #8b949e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-family: 'Inter', sans-serif;
+  color: #c9d1d9 !important;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Intro Tag */
+.intro-tag {
+  color: #8b949e;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.intro-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #55a6ff;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Hero “Button-Text” with Background */
+.hero-btn-text {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #ffffff;
+  background: rgba(13, 17, 23, 0.6); /* dark semi-transparent background */
+  padding: 0.5rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+  cursor: default; /* since it's text not a real button */
+}
+
+.hero-btn-text:hover {
+  color: #55a6ff;
+  background: rgba(13, 17, 23, 0.8); /* slightly darker on hover */
+  transform: translateY(-2px);
+}
+
+/* Container for multiple hero-btn-text lines */
+.hero-btn-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+    

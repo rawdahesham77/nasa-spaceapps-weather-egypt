@@ -1,0 +1,143 @@
+/* src/app/about-us/about-us.component.css */
+
+/* --- Main Section and General Styling --- */
+.about-us-section {
+  background-color: #0d1117; /* Dark space background */
+  color: #c9d1d9; /* Light primary text color */
+  padding: 5rem 1rem;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* --- Header Section --- */
+.team-header {
+  max-width: 800px;
+  margin: 0 auto 4rem auto;
+}
+
+.header-title {
+  font-size: 3rem;
+  font-weight: bold;
+  /* Gradient effect for the title */
+  background: linear-gradient(90deg, #ffffff, #8b949e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-subtitle {
+  color: #8b949e !important;
+  font-size: 1.1rem;
+}
+
+/* --- Intro Tag (The small highlighted text) --- */
+.intro-tag {
+  color: #8b949e;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.intro-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #55a6ff;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite; /* The subtle pulsing animation */
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* --- Team Members Grid --- */
+.team-members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Member Card Styling --- */
+.member-card {
+  background: rgba(13, 17, 23, 0.7); /* Dark semi-transparent background */
+  border: 1px solid #21262d; /* Subtle border */
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.member-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  border-color: #55a6ff; /* Blue glowing border */
+  box-shadow: 0 0 20px rgba(85, 166, 255, 0.2);
+}
+
+/* --- Member Photo --- */
+.member-photo-container {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.member-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%; 
+  border: 4px solid #55a6ff; /* Blue highlight around the photo */
+  box-shadow: 0 0 10px rgba(85, 166, 255, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.member-card:hover .member-photo {
+  transform: scale(1.05);
+}
+
+/* --- Member Info --- */
+.member-name {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.member-role {
+  color: #55a6ff; /* Role in the accent blue color */
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.member-description {
+  font-size: 0.95rem;
+  color: #8b949e;
+}
+
+/* --- Social Icons --- */
+.social-links .social-icon {
+  color: #8b949e;
+  font-size: 1.4rem;
+  margin: 0 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.social-links .social-icon:hover {
+  color: #55a6ff; /* Blue on hover */
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+  .team-members-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
+
+  .header-title {
+    font-size: 2.5rem;
+  }
+}

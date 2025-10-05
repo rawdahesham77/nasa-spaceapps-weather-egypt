@@ -1,0 +1,45 @@
+<div class="app-dashboard-layout">
+
+  <div class="map-card-container">
+      <div id="map" class="map-canvas-style"></div>
+  </div>
+
+  <div class="sidebar-panel">
+
+      <div class="control-card form-card">
+          <h3 class="card-title">⚙️ Select Weather Criteria</h3>
+
+          <form [formGroup]="formdata" class="form-grid">
+
+              <div class="form-group">
+                  <label for="month-select" class="form-label">Month:</label>
+                  <select id="month-select" formControlName="month" class="custom-select">
+                      <option value="" disabled>Select a Month</option>
+                      <option *ngFor="let m of [1,2,3,4,5,6,7,8,9,10,11,12]" [value]="m">{{ m }}</option>
+                  </select>
+              </div>
+
+              <div class="form-group">
+                  <label for="weather-select" class="form-label">Weather Type:</label>
+                  <select id="weather-select" formControlName="weatherType" class="custom-select">
+                      <option value="" disabled>Select Weather Type</option>
+                      <option *ngFor="let w of ['sunshine','rain','snow','wind']" [value]="w">{{ w }}</option>
+                  </select>
+              </div>
+
+          </form>
+          <p class="form-tip-instruction">
+              <span>📍</span> Click on the map to get the weather probability.
+          </p>
+      </div>
+
+      <div *ngIf="prob" class="control-card data-card">
+          <h3 class="card-title data-title">Data Received:</h3>
+          <div class="data-pre-wrapper">
+              <pre class="json-output">{{ prob | json }}</pre> 
+          </div>
+      </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,178 @@
+/* ==================================== */
+/* Footer Variables (Neon / Cyberpunk Theme) */
+/* ==================================== */
+
+$footer-bg: #11141a;             
+$primary-neon: #55a6ff;          
+$secondary-neon: #8b949e;        
+$text-color: #c9d1d9;            
+$animation-time: 1.5s;
+
+/* ==================================== */
+/* Footer Main Structure - Enlarged Rows */
+/* ==================================== */
+
+.app-dark-footer.neon-style {
+    width: 100%;
+    background-color: $footer-bg;
+    padding: 30px 0 15px; // **Increased padding**
+    z-index: 10;
+    margin-top: auto;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.08em; // Slightly wider letter spacing
+}
+
+.footer-container {
+    max-width: 1100px; // Wider container
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; // Gap between navigation rows
+    padding: 0 30px;
+}
+
+/* ==================================== */
+/* Top Status Bar (New Content) */
+/* ==================================== */
+
+.footer-status-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0 10px;
+    border-bottom: 1px solid rgba($primary-neon, 0.1); // Subtle divider
+}
+
+.status-text {
+    font-size: 0.8rem;
+    color: $primary-neon;
+    text-shadow: 0 0 5px rgba($primary-neon, 0.7); // Light neon glow
+}
+
+.neon-dot-pulse {
+    width: 6px;
+    height: 6px;
+    background-color: $primary-neon;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-left: 10px;
+    box-shadow: 0 0 5px $primary-neon;
+    animation: pulse $animation-time infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.5); }
+}
+
+/* ==================================== */
+/* Neon Divider (The "Fashikh" part) */
+/* ==================================== */
+
+.neon-divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba($primary-neon, 0.5); 
+    box-shadow: 0 0 10px rgba($primary-neon, 0.7); 
+    margin-top: 10px;
+    margin-bottom: 20px; // **Larger gap** after the main nav
+}
+
+/* ==================================== */
+/* Navigation Links - General Styling */
+/* ==================================== */
+
+.footer-nav {
+    display: flex;
+    gap: 30px; // **Increased gap** for larger feel
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+.primary-nav {
+    padding-bottom: 5px;
+}
+
+.secondary-nav {
+    padding-top: 5px;
+    margin-bottom: 5px;
+}
+
+.footer-link {
+    color: $secondary-neon;
+    text-decoration: none;
+    font-size: 1rem; // Slightly larger font
+    padding: 5px 0;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.version-link {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.link-separator {
+    color: rgba($primary-neon, 0.3);
+    font-size: 0.95rem;
+}
+
+// Hover effect: Neon Blue Glow
+.footer-link:hover {
+    color: $primary-neon;
+    text-shadow: 0 0 5px rgba($primary-neon, 0.8), 0 0 10px rgba($primary-neon, 0.4);
+}
+
+/* ==================================== */
+/* Copyright and Branding */
+/* ==================================== */
+
+.footer-copyright {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem; // Slightly larger copyright text
+    color: $secondary-neon;
+    padding-top: 15px; // Increased top padding
+}
+
+.copyright-text {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* ==================================== */
+/* Responsiveness */
+/* ==================================== */
+
+@media (max-width: 768px) {
+    .footer-nav {
+        gap: 15px; // Reduce gap on smaller screens
+    }
+    .footer-link {
+        font-size: 0.9rem;
+    }
+    .footer-status-bar {
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-nav {
+        gap: 10px;
+    }
+    .footer-link, .link-separator {
+        font-size: 0.8rem;
+    }
+    .footer-copyright {
+        font-size: 0.75rem;
+    }
+    .footer-status-bar {
+        flex-direction: column;
+    }
+    .status-text {
+        margin-bottom: 5px;
+    }
+}
